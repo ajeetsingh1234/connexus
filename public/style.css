@@ -1,0 +1,324 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color:  #E8E8E8;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+header, main, footer {
+    background-color:whitesmoke;
+    max-width: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+ 
+.foot {
+    margin-top: 100px; /* Pushes footer to the bottom */
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    height: 200px;
+}
+.foot_bottom {
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+.footer {
+    margin-bottom: 0;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    height: 200px;
+}
+
+.footer_bottom {
+   
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+
+.footer_bottom p {
+    margin: 0;
+    font-size: 14px;
+ 
+}
+
+
+/* !Header */
+
+    /* *NavBar */
+
+    .navBar {
+        background-color:#B4B4B8;
+        margin: 0;
+        padding: .5rem 1rem;
+        display: flex;
+        height: 100px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+   
+
+    .navBrand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .brandName {
+        color: white;
+        font-size: 2rem;
+    }
+
+    .navLinks {
+        list-style: none;
+        margin: 20px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .navLink a {
+        color: rgb(28, 27, 27);
+        font-size: 1.25rem;
+    }
+
+    .navLink:hover a {
+        color: rgb(255, 255, 255);
+        transition: all ease-in-out 100ms;
+    }
+
+    .navButtons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .navButton {
+        padding: .5rem 1rem;
+        border-radius: .25rem;
+        background-color:#B4B4B8;
+        color: rgb(0, 0, 0);
+         font-size: 20px;
+        border: none;
+    }
+
+    .navButton:hover {
+        background-color: whitesmoke;
+        color: black;
+        transition: all ease-in-out 100ms;
+    }
+
+    .navButton:active {
+        background-color: whitesmoke;
+    }
+    #nav-text{
+        color: black;
+        font-size: 40px;
+    }
+
+/* !Main */
+
+    .sectionHeading {
+        color: black;
+        margin-bottom: 2rem;
+    }
+
+    /* *Services */
+
+    .serviceCards {
+        display: flex;
+        justify-content: space-around;
+        align-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+    }
+
+    .serviceCard {
+        width: 350px;
+        height: 450px;
+        background-color:white;
+        padding: 1rem;
+        border: solid black .2rem;
+        scale: 90%;
+        transition: all ease-in-out 200ms;
+        border-radius: 3%;
+    }
+
+    .serviceCard:hover {
+        box-shadow:  black 0rem 0rem 1rem;
+        scale: 100%;
+    }
+
+    .serviceImage {
+        max-width: 250px;
+        max-height: 300px;
+        border-radius: 10%;
+
+    }
+
+    .serviceTitle {
+        font-size: 2rem;
+        color:black;
+    }
+
+    .serviceDescription {
+        font-size: 1rem;
+        color: black;
+    }
+
+
+
+
+    /* client dashboard*/
+
+
+    
+    .clientCards {
+        display: flex;
+        justify-content: space-around;
+        align-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+    }
+
+    .clientCard {
+        justify-content: center;
+        width: 300px;
+        height: 400px;
+        background-color:rgb(255, 255, 255);
+        border: solid black .2rem;
+        scale: 90%;
+        transition: all ease-in-out 200ms;
+        border-radius: 13%;
+        
+    }
+
+    .clientCard:hover {
+        box-shadow:  black 0rem 0rem 1rem;
+        scale: 100%;
+    }
+
+    .clientImage {
+        max-width: 15rem;
+        max-height: 15rem;
+        border-radius: 20%;
+    
+
+    }
+
+    .clientTitle {
+        font-size: 2rem;
+        color:black;
+    }
+
+    .clientDescription {
+        font-size: 1rem;
+        color: black;
+    }
+
+/* Client pic At Dashboard*/
+    .image-container {
+        position: absolute;
+        right: 200px;
+        top: 100px; /* Adjust this value as needed */
+        margin: 0;
+    }
+  
+
+   /*-------------- Influencer Dashbord-------------------*/
+
+
+        
+    .inflCards {
+        display: flex;
+        justify-content: space-around;
+        align-content: space-evenly;
+        align-items: start;
+        flex-wrap: nowrap;
+    }
+
+    .inflCard {
+        justify-content: center;
+        width: 350px;
+        height: 350px;
+        background-color:white;
+        padding: 1rem;
+        border: solid black .2rem;
+        scale: 90%;
+        transition: all ease-in-out 200ms;
+        border-radius: 3%;
+        
+    }
+
+    .inflCard:hover {
+        box-shadow:  black 0rem 0rem 1rem;
+        scale: 100%;
+    }
+
+    .inflImage {
+        max-width: 80rem;
+        max-height: 80%;
+        border-radius: 20%;
+    
+
+    }
+
+    .form-container {
+        width: 80%;
+        max-width: 1000px;
+        padding: 20px;
+        background-color:rgb(233, 233, 233);
+        border-radius: 10px;
+        box-shadow: 5px 5px 25px rgba(18, 17, 17, 0.897);
+        margin-top: 100px;
+    }
+
+    .button-align {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .container-card{
+        position: absolute;
+      }
+
+      /* find card in find influencer page*/
+
+      .FindCard {
+        width: 100%;
+        max-height: max-content;
+        background-color:white;
+        padding: 1rem;
+        border: solid rgb(93, 93, 93) .2rem;
+        scale: 90%;
+        transition: all ease-in-out 200ms;
+        border-radius: 3%;
+    /
+    }
+
+    .FindCard:hover {
+        box-shadow:  black 0rem 0rem 1rem;
+        scale: 100%;
+    }
+   
+
+
+  
+
+
+
+    
