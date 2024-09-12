@@ -12,24 +12,24 @@ app.use(express.static("public"));
 app.use(express.urlencoded("true"));
 app.use(fileuploader());
 
- let config = {
-     host :"127.0.0.1",
-     user:"root",
-     password:"ajeet321##",
-     database:"project24",
-     dateStrings:true
- }
+//  let config = {
+//      host :"127.0.0.1",
+//      user:"root",
+//      password:"ajeet321##",
+//      database:"project24",
+//      dateStrings:true
+//  }
             
 
-//  let config = {
-//     host :"b8gyw3wrizty3zibatbg-mysql.services.clever-cloud.com",
-//     user:"ufhya3natsyqytjc",
-//     password:"SRU7kQQlm4lwXKyj8ihX",
-//     database:"b8gyw3wrizty3zibatbg",
-//     dateStrings:true,
-//     keepAliveDelay : 10000,
-//     enablekeepAlive : true
-// }
+ let config = {
+    host :"b8gyw3wrizty3zibatbg-mysql.services.clever-cloud.com",
+    user:"ufhya3natsyqytjc",
+    password:"SRU7kQQlm4lwXKyj8ihX",
+    database:"b8gyw3wrizty3zibatbg",
+    dateStrings:true,
+    keepAliveDelay : 10000,
+    enablekeepAlive : true
+}
 
 
 
