@@ -1,183 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connexus</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="style.css">
 
   <script>
-    $(document).ready(function()
-    {
+    $(document).ready(function () {
 
-      $("#txtEmail_signup").blur(function()
-      {
-        if($(this).val()=="")
-        {
-          $("#btnSignup").prop("disabled",true);
+      $("#txtEmail_signup").blur(function () {
+        if ($(this).val() == "") {
+          $("#btnSignup").prop("disabled", true);
         }
-        if($(this).val()!="")
-        {
-          $("#btnSignup").prop("disabled",false);
+        if ($(this).val() != "") {
+          $("#btnSignup").prop("disabled", false);
         }
       })
 
-      $("#txtPwd_signup").blur(function()
-      {
-        if($(this).val()=="")
-        {
-          $("#btnSignup").prop("disabled",true);
+      $("#txtPwd_signup").blur(function () {
+        if ($(this).val() == "") {
+          $("#btnSignup").prop("disabled", true);
         }
-        if($(this).val()!="")
-        {
-          $("#btnSignup").prop("disabled",false);
+        if ($(this).val() != "") {
+          $("#btnSignup").prop("disabled", false);
         }
       })
 
-      $("#utype").blur(function()
-      {
-        
-        if($(this).val()=="none")
-        {
-          $("#btnSignup").prop("disabled",true);
+      $("#utype").blur(function () {
+
+        if ($(this).val() == "none") {
+          $("#btnSignup").prop("disabled", true);
         }
-        if($(this).val()!="none")
-        {
-          $("#btnSignup").prop("disabled",false);
+        if ($(this).val() != "none") {
+          $("#btnSignup").prop("disabled", false);
         }
-        if($("#txtEmail_signup").val()=="" || $("#txtPwd_signup").val()=="")
-        {
-          $("#btnSignup").prop("disabled",true);
+        if ($("#txtEmail_signup").val() == "" || $("#txtPwd_signup").val() == "") {
+          $("#btnSignup").prop("disabled", true);
         }
       })
 
-      $("#txtForget_login").blur(function()
-      {
-        if($(this).val()=="")
-        {
-          $("#btnForget").prop("disabled",true);
+      $("#txtForget_login").blur(function () {
+        if ($(this).val() == "") {
+          $("#btnForget").prop("disabled", true);
         }
-        else
-        {
-          $("#btnForget").prop("disabled",false);
+        else {
+          $("#btnForget").prop("disabled", false);
         }
       })
 
     })
   </script>
-</head>
-<body id="itstop">
- <!--Navbar-->
-
-          
-  
-     <nav class="navBar">
+  <style>
+    @media only screen and (max-width:899px){
+       .carousel-inner{
+        display: none;
+      }
       
-        <a class="brandName" href="index.html" id="nav-text">Connexus</a>
-      <div class="ms-auto d-flex align-items-center">
+}
+  </style>
+</head>
 
-        <div class="navItem navButtons">
-          <button type="button" class="navButton" data-bs-toggle="modal" data-bs-target="#signupModal" id="buttons">Signup</button>
-          <button type="button" class="navButton" data-bs-toggle="modal" data-bs-target="#loginModal" id="buttons">Login</button>
+<body id="itstop" width="100%" style="background-color: #f8f8f8;">
+  <!----------------------------------------------Navbar-->
+  <header>
+    <nav class="navBar">
+
+      <a class="brandName" href="index.html" id="nav-text">Connexus</a>
+
+      <div class="ms-auto d-flex align-items-center">
+        <div class=" navButtons">
+          <button type="button" class="navButton" data-bs-toggle="modal" data-bs-target="#signupModal"
+            id="buttons">Signup</button>
+          <button type="button" class="navButton" data-bs-toggle="modal" data-bs-target="#loginModal"
+            id="buttons">Login</button>
         </div>
-      <ul class="navItem navLinks">
-        <li class="navLink">
-          <a href="#ourservices">Services</a>
-        </li>
-        <li class="navLink">
-          <a href="#ourteam">Team</a>
-        </li>
-        <li class="navLink">
-          <a href="#reachus">Contact</a>
-        </li>
-      </ul>
+        <ul class="navItem navLinks">
+          <li class="navLink">
+            <a href="#ourservices">Services</a>
+          </li>
+          <li class="navLink">
+            <a href="#ourteam">Team</a>
+          </li>
+          <li class="navLink">
+            <a href="#reachus">Contact</a>
+          </li>
+        </ul>
       </div>
-     
+
     </nav>
-  
+  </header>
+
   <main>
-     <!-- *Carousel---> 
+
+    <!------------------------------------------- *Carousel--------------------------->
+
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="1500">
-          <img src="pics/influencer.png" class="carouselImage d-block w-100" alt="..." width="200"  height="500" >
+          <img src="pics/influencer.png" class="carouselImage d-block w-100" alt="..." width="200" height="500">
           <div class="carousel-caption d-none d-md-block">
-          <center><p style="color: rgb(14, 14, 14); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-          "Elevate your brand through dynamic interactions with influencers and clients alike."</p>
-     </center>
-            
-            </center>
-        </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="1500">
-  
 
-     <img src="pics/influe.webp" class="carouselImage d-block w-100" alt="..."  width="200" height="500">
-     <div class="carousel-caption d-none d-md-block">
-       
-       <p style="color: rgb(14, 14, 14); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-         "Transform your brand's presence with our innovative solutions and standout strategies."</p>
+            <center>
+              <p
+                style="color: rgb(14, 14, 14); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                "Elevate your brand through dynamic interactions with influencers and clients alike."</p>
+            </center>
+          </div>
         </div>
+
+        <div class="carousel-item" data-bs-interval="1500">
+          <img src="pics/influe.webp" class="carouselImage d-block w-100" alt="..." width="200" height="500">
+          <div class="carousel-caption d-none d-md-block">
+
+            <p
+              style="color: rgb(14, 14, 14); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+              "Transform your brand's presence with our innovative solutions and standout strategies."</p>
+          </div>
         </div>
         <center>
-        <div class="carousel-item" data-bs-interval="1500">
-       
-         
-              <img src="pics/collb.jpg" class="carouselImage d-block w-100" alt="..." width="250" height="500" >
-          <div class="carousel-caption d-none d-md-block">
-           
+          <div class="carousel-item" data-bs-interval="1500">
 
-          <center>
-          <p style="color:  rgb(17, 18, 17); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-            " Connect with top influencers and create impactful campaigns 
-            <br> that resonate with your audience."</p>
-              
-        </div>
-        </div>
-      </center>
-        
+
+            <img src="pics/collb.jpg" class="carouselImage d-block w-100" alt="..." width="250" height="500">
+            <div class="carousel-caption d-none d-md-block">
+
+
+              <center>
+                <p
+                  style="color:  rgb(17, 18, 17); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                  " Connect with top influencers and create impactful campaigns
+                  <br> that resonate with your audience."
+                </p>
+
+            </div>
+          </div>
+        </center>
+
       </div>
-  </div>
-  <br>
+    </div>
+    <br>
 
-    <!-- *Services -->
-     <center>
-    <div class="section" id="ourservices" style="color: purple; font-size: 40px;">
-      <h1 class="sectionHeading">Services</h1>
-      <div class="serviceCards">
-        <div class="serviceCard">
-          <img src="pics/collaboration.jpeg" alt="collaboration.pic" height="230px" width="300px"  style="border-radius: 20px;">
-          <br>
-          <h5 class="serviceTitle">Collaborations</h5>
-          
-          <p class="serviceDescription"> Collaborate with top influencers to boost your brand's reach."
+    <!--------------------------------- *Services ------------------------>
+
+    <center>
+      <div class="section" id="ourservices" style="color: purple; font-size: 40px;">
+        <h1 class="sectionHeading">Services</h1>
+        <div class="serviceCards">
+
+          <div class="serviceCard">
+            <img src="pics/collaboration.jpeg" alt="collaboration.pic" height="200px" width="270px"
+              style="border-radius: 20px;">
             <br>
-            <br>
-            "Partner with influencers for impactful and authentic campaigns."
-          <br>
-         </p>
-           </div>
+            <h5 class="serviceTitle">Collaborations</h5>
+            <p class="serviceDescription"> Collaborate with top influencers to boost your brand's reach."
+              <br>
+              <br>
+              "Partner with influencers for impactful and authentic campaigns."
+              <br>
+            </p>
+          </div>
 
 
-        <div class="serviceCard">
-          <img src="pics/meetgreet.webp" class="serviceImage" alt="...">
-          <h5 class="serviceTitle">Meet & Greet</h5>
-       
-          <p class="serviceDescription">  "Don't miss the chance to connect with your favorite influencers in person."
-            <br>
-            <br>
-            
-            "Experience a unique meet & greet event, creating memories that last." </p>
+          <div class="serviceCard">
+            <img src="pics/meetgreet.webp" class="serviceImage" alt="...">
+            <h5 class="serviceTitle">Meet & Greet</h5>
+
+            <p class="serviceDescription"> "Don't miss the chance to connect with your favorite influencers in person."
+              <br>
+              "Experience a unique meet & greet event, creating memories that last."
+            </p>
           </div>
 
           <div class="serviceCard">
@@ -187,159 +192,127 @@
               <br>
               <BR>
               "Connect with top influencers to elevate your brand."
-               </p></div>
-
-
-        <div class="serviceCard">
-          <img src="pics/promotion.jpeg" class="serviceImage" alt="Promotion.pic">
-          <h5 class="serviceTitle">Promotion</h5>
-          <p class="serviceDescription"> "Discover innovation, embrace quality."
-            <br>
-            <BR>
-            "Your trusted partner for excellence."
-            </p> 
-           </div>
-      </div>
-    </div>
-    <br>
-    </center>
-
-    <!-- *Team -->
-     <center>
-    <div class="section" id="ourteam" style="color: rgb(0, 0, 0); font-size: 40px;">
-      <h1 class="sectionHeading">Team</h1>
-      <div class="serviceCards">
-        <div class="serviceCard">
-          <img src="pics/Ajeet.jpg" class="serviceImage" alt="Ajeet.pic"  width="300px">
-          <h5 class="serviceTitle">Developed by</h5>
-          <p class="serviceDescription">Ajeet singh
-            <br> Full Stack Developer
-          </p>
-        </div>
-        <div class="serviceCard">
-          <img src="pics/rajesh bansal.jpg" class="serviceImage" alt="Rajesh Bansal">
-          <h5 class="serviceTitle">Under The Guidance of</h5>
-          <p class="serviceDescription"> Rajesh bansal <br> Author of Real Java<br> 20+ year teching experience</p>
-        </div>
-       
-      </div>
-    </div>
-    </center>
-  
-  <center>
-  <div class="section" id="reachus" style="color: rgb(0, 0, 0); font-size: 40px;">
-    <h1 class="sectionHeading">Reach Us</h1>
-    <div class="container">
-      
-    </div>
-  </div>
-  <!-- <div class="container" style="background-color: #DBF7F1 ;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.807201087355!2d76.36212627508581!3d30.356428803722448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391028ab86533db5%3A0x93cc1f72eae1c9a8!2sThapar%20Institute%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1721063752863!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div> -->
-  <div>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5821.0611954026845!2d74.92164974593372!3d30.17288657485915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39172d0bb1737c33%3A0xed9d3631bdaa7e49!2z4KSX4KS_4KSG4KSo4KWAIOClm-CliOCksiDgpLjgpL_gpILgpJgg4KSV4KWI4KSu4KWN4KSq4KS4IOCkleClieCksuClh-CknCDgpJHgpKvgpLwg4KSH4KSC4KSc4KWA4KSo4KS_4KSv4KSw4KS_4KSC4KSXIOCklOCksCDgpJ_gpYfgpJXgpY3gpKjgpYvgpLLgpYngpJzgpYA!5e0!3m2!1shi!2sin!4v1721279219306!5m2!1shi!2sin" width="1200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
-  </div>
-  </center>
-  </main>
-<!-- footer -->
-
-<center>
- 
-  <footer class="footer" style="background-color:#E8E8E8">
-      <div class="container">
-          <div class="row" style="margin-top: 10px;">
-            <a href="#itstop">Go to Top</a>
-            <div class="col-lg-3 col-md-6">
-              <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
-                  <h3 class="f-title f_600 t_color f_size_18">Products</h3>
-                  <a href=" #">Brands </a>
-               
-                  <br>
-                 <a href="#">Measurements</a>
-               
-                 <br>
-                 <a href="#">Creators</a>
-              </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
-                      <h3 class="f-title f_600 t_color f_size_18">Connect us</h3>
-                      <a href=" https://www.instagram.com/ajeet_dhaliwal321/">instagram </a>
-                      <i class="fa-brands fa-facebook-f"></i>
-                      <br>
-                     <a href=" https://www.facebook.com/profile.php?id=61562955028858">Facebook</a>
-                     <i class="fa-brands fa-instagram"></i>
-                      <!-- <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
-                          <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
-                          <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
-                          <p class="mchimp-errmessage" style="display: none;"></p>
-                          <p class="mchimp-sucmessage" style="display: none;"></p>
-                      </form> -->
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
-                      <h3 class="f-title f_600 t_color f_size_18">About Us</h3>
-                      <ul class="list-unstyled f_list">
-                          <li><a href="#">Company</a></li>
-                          <!-- <li><a href="#">Android App</a></li>
-                          <li><a href="#">ios App</a></li>
-                          <li><a href="#">Desktop</a></li>
-                          <li><a href="#">Projects</a></li>
-                          <li><a href="#">My tasks</a></li> -->
-                      </ul>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
-                      <h3 class="f-title f_600 t_color f_size_18">Help</h3>
-                      <ul class="list-unstyled f_list">
-                          <!-- <li><a href="#">FAQ</a></li> -->
-                          <li><a href="#">Term &amp; conditions</a></li>
-                          <!-- <li><a href="#">Reporting</a></li>
-                          <li><a href="#">Documentation</a></li>
-                          <li><a href="#">Support Policy</a></li> -->
-                          <li><a href="#">Privacy</a></li>
-                      </ul>
-                  </div>
-              </div>
-            
+            </p>
           </div>
-      </div>
-      <center>
-      <div class="footer_bg">
-          <div class="footer_bg_one"></div>
-          <div class="footer_bg_two"></div>
-      </div>
-  </div>
 
-  <div class="footer_bottom">
-      <div class="container">
-         
-              <div class="col-lg-6 col-sm-7">
-              
-                                    <p class="mb-0 f_400">copyright Ⓒ  2024-soon 
-                      Connexus.com
-                    <br> All rights reserved.</p>
-             
+
+          <div class="serviceCard">
+            <img src="pics/promotion.jpeg" class="serviceImage" alt="Promotion.pic">
+            <h5 class="serviceTitle">Promotion</h5>
+            <p class="serviceDescription"> "Discover innovation, embrace quality."
+              <br>
+              <BR>
+              "Your trusted partner for excellence."
+            </p>
+          </div>
           
-
-              <!-- <div class="col-lg-6 col-sm-5 text-right">
-                  <p>Made with <i class="icon_heart"></i> in <a href="http://cakecounter.com" target="_blank">CakeCounter</a></p>
-              </div> -->
-          </div>
+        </div>
       </div>
-  </div>
-</center>
-  
+      <br>
+    </center>
 
-</footer>
+    <!---------------------------- *Team -------------------->
+    <center>
+      <div class="section" id="ourteam" style="color: rgb(0, 0, 0); font-size: 40px;">
+        <h2 class="sectionHeading">Team</h2>
+        <div class="serviceCards">
+          <div class="serviceCard">
+            <img src="pics/Ajeet.jpg" class="serviceImage" alt="Ajeet.pic" width="400px">
+            <h5 class="serviceTitle">Developed by</h5>
+            <p class="serviceDescription">Ajeet singh
+              <br> Full Stack Developer
+            </p>
+          </div>
+          <div class="serviceCard">
+            <img src="pics/rajesh bansal.jpg" class="serviceImage" alt="Rajesh Bansal">
+            <h5 class="serviceTitle">Under The Guidance of</h5>
+            <p class="serviceDescription"> Rajesh bansal <br> Author of Real Java<br> 20+ year teching experience</p>
+          </div>
 
-</center> 
+        </div>
+      </div>
+    </center>
+
+    <center>
+      <h2 class="sectionHeading " id="reachus" style="color: black;">Reach Us</h2>
+      <div class="container_map">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5821.0611954026845!2d74.92164974593372!3d30.17288657485915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39172d0bb1737c33%3A0xed9d3631bdaa7e49!2z4KSX4KS_4KSG4KSo4KWAIOClm-CliOCksiDgpLjgpL_gpILgpJgg4KSV4KWI4KSu4KWN4KSq4KS4IOCkleClieCksuClh-CknCDgpJHgpKvgpLwg4KSH4KSC4KSc4KWA4KSo4KS_4KSv4KSw4KS_4KSC4KSXIOCklOCksCDgpJ_gpYfgpJXgpY3gpKjgpYvgpLLgpYngpJzgpYA!5e0!3m2!1shi!2sin!4v1721279219306!5m2!1shi!2sin"
+          width="100%" height="100%" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </center>
+  </main>
+  <!-- footer -->
+
+  <center>
 
 
-<!--Signup Modal -->
-<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: black">
+    <footer class="footer" style="background-color:#e4e4e4" width="100%">
+      <div class="container">
+        <div class="row" style="margin-top: 10px;">
+          <a href="#itstop">Go to Top</a>
+          <div class="col-lg-3 col-md-6">
+            <h3 class="f-title f_600 t_color f_size_18">Products</h3>
+            <a href=" #">Brands </a>
+            <br>
+            <a href="#">Measurements</a>
+            <br>
+            <a href="#">Creators</a>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h3 class="f-title f_600 t_color f_size_18">Connect us</h3>
+            <a href=" https://www.instagram.com/ajeet_dhaliwal321/">Instagram </a>
+            <i class="fa-brands fa-facebook-f"></i>
+            <br>
+            <a href=" https://www.facebook.com/profile.php?id=61562955028858">Facebook</a>
+            <i class="fa-brands fa-instagram"></i>
+
+
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h3 class="f-title f_600 t_color f_size_18">About Us</h3>
+            <ul class="list-unstyled f_list">
+              <li><a href="#">Company</a></li>
+
+
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+            <ul class="list-unstyled f_list">
+
+              <li><a href="#">Term &amp; conditions</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+
+      <center>
+        <div  style="background-color:#e4e4e4">
+       <p class="mb-0 f_400" >copyright Ⓒ 2024-soon
+       Connexus.com
+      <br> All rights reserved.
+       </p>
+       </div>
+      
+      </center>
+
+
+    </footer>
+
+  </center>
+
+
+  <!--------------------------------------Signup Modal ----------------------------->
+
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    style="color: black">
+
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -347,40 +320,46 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form  method="get" >
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label" >Email address</label>
-                  <input type="email" name="txtEmail_signup" class="form-control" id="txtEmail_signup" aria-describedby="emailHelp"  style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" name="txtPwd_signup" class="form-control" id="txtPwd_signup"  style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
-                </div>
-                <div class="mb-3">
-                    Select Type: 
-                    <select  name="utype" id="utype" class="form-select" style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
-                        <option value="none">Select</option>
-                        <option value="Collaborator">Collaborator</option>
-                        <option value="Influencer">Influencer</option>
-                        
-                    </select> 
-                </div>
-       
-                </form>
-                <br>
-                <div>
-                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"  style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">Close</button>
-                  <input type="button" id="btnSignup" value="Signup" class="btn btn-outline-primary"  style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;"></input>
-                </div>
+          <form method="get">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" name="txtEmail_signup" class="form-control" id="txtEmail_signup"
+                aria-describedby="emailHelp" style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;" required>
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" name="txtPwd_signup" class="form-control" id="txtPwd_signup"
+                style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;" required>
+            </div>
+            <div class="mb-3">
+              Select Type:
+              <select name="utype" id="utype" class="form-select"
+                style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;" required>
+                <option value="none">Select</option>
+                <option value="Collaborator">Collaborator</option>
+                <option value="Influencer">Influencer</option>
+
+              </select>
+            </div>
+
+          </form>
+          <br>
+          <div>
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"
+              style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">Close</button>
+            <input type="button" id="btnSignup" value="Signup" class="btn btn-outline-primary"
+              style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;"></input>
+          </div>
         </div>
-        
+
       </div>
     </div>
   </div>
 
-<!--Login Modal-->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: black">
+  <!--Login Modal-->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    style="color: black">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -388,36 +367,43 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form method="get" action="/forgot-pwd">
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label" >Email address</label>
-                  <input type="email" class="form-control" name="txtEmail_login" id="txtEmail_login" aria-describedby="emailHelp"  style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" name="txtPwd_login" id="txtPwd_login"  style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Forget Password</label>
-                 
-                  <input type="email" class="form-control" id="txtForget_login" name="txtForget_login" placeholder="Enter Email Id"  style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
-                  <br>
-                  <input type="submit" id="btnForget" value="Forget Password?" class="btn btn-outline-secondary" style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
-                </div>
-                
-                </form>
-                <div class="modal-footer" style="margin-left:10px;">
-                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"  style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">Close</button>
-                <input type="button" id="btnLogin" value="Login" class="btn btn-outline-primary"  style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
-              </div>
+          <form method="get" action="/forgot-pwd">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="txtEmail_login" id="txtEmail_login"
+                aria-describedby="emailHelp" style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" name="txtPwd_login" id="txtPwd_login"
+                style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Forget Password</label>
+
+              <input type="email" class="form-control" id="txtForget_login" name="txtForget_login"
+                placeholder="Enter Email Id" style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
+              <br>
+              <input type="submit" id="btnForget" value="Forget Password?" class="btn btn-outline-secondary"
+                style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
+            </div>
+
+          </form>
+          <div class="modal-footer" style="margin-left:10px;">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"
+              style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">Close</button>
+            <input type="button" id="btnLogin" value="Login" class="btn btn-outline-primary"
+              style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;">
+          </div>
         </div>
-        
+
       </div>
     </div>
   </div>
-<!------------------------------------------------------------------------------->
-<!--Linking it to script.js-->
-<script src="script.js"></script>
+  <!------------------------------------------------------------------------------->
+  <!--Linking it to script.js-->
+  <script src="script.js"></script>
 </body>
+
 </html>

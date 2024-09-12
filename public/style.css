@@ -6,14 +6,13 @@
 }
 
 body {
-    background-color:  #E8E8E8;
+    background-color: white;
     display: flex;
     flex-direction: column;
     max-width: 100%;
 }
 
 header, main, footer {
-    background-color:whitesmoke;
     max-width: inherit;
 }
 
@@ -23,8 +22,8 @@ a {
  
 .foot {
     margin-top: 100px; /* Pushes footer to the bottom */
-    padding: 20px 0;
-    background-color: #f8f9fa;
+    padding-top: 10px;
+  background-color:WHITE;
     height: 200px;
 }
 .foot_bottom {
@@ -34,7 +33,7 @@ a {
 .footer {
     margin-bottom: 0;
     padding: 20px 0;
-    background-color: #f8f9fa;
+ 
     height: 200px;
 }
 
@@ -56,14 +55,13 @@ a {
     /* *NavBar */
 
     .navBar {
-        background-color:#B4B4B8;
+        background-color:white;
         margin: 0;
         padding: .5rem 1rem;
         display: flex;
-        height: 100px;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
+        row-gap: 1rem;
         flex-wrap: wrap;
     }
    
@@ -73,12 +71,8 @@ a {
         align-items: center;
         justify-content: center;
     }
+    
 
-
-    .brandName {
-        color: white;
-        font-size: 2rem;
-    }
 
     .navLinks {
         list-style: none;
@@ -92,12 +86,12 @@ a {
     }
 
     .navLink a {
-        color: rgb(28, 27, 27);
+        color: rgb(20, 19, 19);
         font-size: 1.25rem;
     }
 
     .navLink:hover a {
-        color: rgb(255, 255, 255);
+        color: rgb(255, 197, 7);
         transition: all ease-in-out 100ms;
     }
 
@@ -110,24 +104,31 @@ a {
     .navButton {
         padding: .5rem 1rem;
         border-radius: .25rem;
-        background-color:#B4B4B8;
+        background-color:white;
         color: rgb(0, 0, 0);
          font-size: 20px;
         border: none;
     }
 
     .navButton:hover {
-        background-color: whitesmoke;
+        background-color: rgb(205, 205, 205);
         color: black;
         transition: all ease-in-out 100ms;
     }
 
     .navButton:active {
-        background-color: whitesmoke;
+        background-color:  rgb(205, 205, 205);
     }
     #nav-text{
         color: black;
         font-size: 40px;
+        margin: 10px;
+    }
+    .container_map{
+        width: 80%;
+        border: 2px solid whitesmoke;
+        border-radius: 20%;
+
     }
 
 /* !Main */
@@ -140,6 +141,7 @@ a {
     /* *Services */
 
     .serviceCards {
+
         display: flex;
         justify-content: space-around;
         align-content: space-between;
@@ -148,8 +150,8 @@ a {
     }
 
     .serviceCard {
-        width: 350px;
-        height: 450px;
+        width: 300px;
+        height: 400px;
         background-color:white;
         padding: 1rem;
         border: solid black .2rem;
@@ -164,8 +166,8 @@ a {
     }
 
     .serviceImage {
-        max-width: 250px;
-        max-height: 300px;
+        max-width: 200px;
+        max-height: 250px;
         border-radius: 10%;
 
     }
@@ -187,23 +189,24 @@ a {
 
 
     
-    .clientCards {
+    .clientcontainer {
         display: flex;
         justify-content: space-around;
         align-content: space-between;
         align-items: start;
         flex-wrap: wrap;
+        padding:40px 20px  100px 20px;
     }
 
     .clientCard {
         justify-content: center;
-        width: 300px;
-        height: 400px;
+        width: 280px;
+        height: 300px;
         background-color:rgb(255, 255, 255);
-        border: solid black .2rem;
+        border: solid rgb(0, 0, 0) .2rem;
         scale: 90%;
         transition: all ease-in-out 200ms;
-        border-radius: 13%;
+        border-radius: 5%;
         
     }
 
@@ -214,8 +217,8 @@ a {
 
     .clientImage {
         max-width: 15rem;
-        max-height: 15rem;
-        border-radius: 20%;
+        max-height: 80%;
+        border-radius: 40%;
     
 
     }
@@ -229,15 +232,27 @@ a {
         font-size: 1rem;
         color: black;
     }
+   
 
 /* Client pic At Dashboard*/
     .image-container {
         position: absolute;
         right: 200px;
-        top: 100px; /* Adjust this value as needed */
+        top: 150px; /* Adjust this value as needed */
         margin: 0;
     }
-  
+    
+@media only screen and (max-width:1210px)
+{
+  .image-container{
+   display:none;
+   .container {
+    content: center;
+    
+   }
+  }
+
+}
 
    /*-------------- Influencer Dashbord-------------------*/
 
@@ -248,20 +263,19 @@ a {
         justify-content: space-around;
         align-content: space-evenly;
         align-items: start;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 
     .inflCard {
         justify-content: center;
-        width: 350px;
+        align-content: space-evenly;
+        width: 275px;
         height: 350px;
         background-color:white;
-        padding: 1rem;
         border: solid black .2rem;
         scale: 90%;
         transition: all ease-in-out 200ms;
-        border-radius: 3%;
-        
+        border-radius: 3%;        
     }
 
     .inflCard:hover {
@@ -270,16 +284,14 @@ a {
     }
 
     .inflImage {
-        max-width: 80rem;
-        max-height: 80%;
         border-radius: 20%;
-    
-
+        height: auto;
+        width: 90%;
     }
 
     .form-container {
-        width: 80%;
-        max-width: 1000px;
+        width: 70%;
+        height: 40%;
         padding: 20px;
         background-color:rgb(233, 233, 233);
         border-radius: 10px;
@@ -307,13 +319,21 @@ a {
         scale: 90%;
         transition: all ease-in-out 200ms;
         border-radius: 3%;
-    /
+    
     }
 
     .FindCard:hover {
         box-shadow:  black 0rem 0rem 1rem;
         scale: 100%;
     }
+
+    
+
+
+
+
+
+
    
 
 

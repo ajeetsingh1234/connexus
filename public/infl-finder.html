@@ -133,20 +133,17 @@
    location.href="index.html";
  }
    </script>
+
    
 </head>
-<body  id="itstop" ng-app="mymodule" ng-controller="mycontroller" style="background-color:  rgb(237, 237, 237);">
+<body width="100%" id="itstop" ng-app="mymodule" ng-controller="mycontroller" style="background-color:  rgb(237, 237, 237);">
     
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-    
       <!-- --------------------------------------------------------------- -->
-      <a class="navbar-brand" href="index.html" id="nav-text"><h2 style="margin-left: 20px;">Connexus</h2></a>
+      <a class="navbar-brand" href="index.html" id="nav-text"><h2 style="margin-left: 15px; ">Connexus</h2></a>
      
-      
-    
-        <!-- ------------------------------------------------------------------ -->
         <nav class="navbar bg-body-tertiary">
           <div class="container-fluid">
             <input type="button" class="btn btn-outline-secondary" value="Logout" id="btnLogout" onclick="doLogout();">
@@ -157,17 +154,18 @@
     </div>
   </nav>
   <!-- ------------------------------------------------------------- -->
+   <center>
   <div class="container" >
     <div class="row" >
       <center>
-      <div style="color: #020202; font-size: 30px;  ">Find Influencers</div>
+      <div style="color: #020202; font-size: 30px;  ">Find <BR>Influencers</div>
     </center>
     </div>
   </div>
     <!--Form-->
      
     <div class="row">
-    <div class="col-md-10" id="form">
+    <div class="col-md-" id="form">
    <form>
     <!-------------------------------------------------------------------------->
     <!-- <div class="col-md-4">
@@ -194,11 +192,13 @@
           <option ng-repeat="obj in jsonArrayCity" value="{{obj.city}}" >{{obj.city}}</option>
       </select>
       </div> -->
-      <div class="row">
-        <div class="col-md-3" style="margin-left: 20px;">
+   
+      <!-- <div class="row"> -->
+      
+        <div class="col-md-3"  style="margin-left: 20px;"  >
           <label  class="form-label" >Field</label>
-      <select class="form-select" ng-model="selfield" ng-change="doShowSel();" style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;" aria-placeholder="Select field">
-        <option value="none">Select</option>
+        <select class="form-select" ng-model="selfield" ng-change="doShowSel();" style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;" aria-placeholder="Select field" required>
+        <option value="SELECT">Select</option>
         <option value="Fashion">Fashion/lifestyle</option>
         <option value="Travel">Travel</option>
         <option value="Food">Food</option>
@@ -211,19 +211,23 @@
         <option value="Gaming">Gaming</option>
       </select> 
         </div>
-        <div class="col-md-3" style="margin-left: 20px;">
+     
+        <div class="col-md-3" style="margin-left: 20px;" >
           <label for="inputCity" class="form-label">City</label>
-        <select class="form-select" ng-model="selCity" style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;" >
+        <select class="form-select" ng-model="selCity" style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;"  required>
 
           <option ng-repeat="obj in jsonArrayCity" value="{{obj.city}}" >{{obj.city}}</option>
       </select>
         </div>
-      </div>
+      
+      <!-- </div> -->
+  
     <br>
 
     <div class="col-md-4" style="margin-left: 20px;">
   <button type="submit" class="btn btn-outline-secondary" id="buttons" ng-click="doShowSelAll();"style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;" >Search</button> 
 </div>
+
 <br>
     <!---------------------------------------------------------------------->
  
@@ -238,7 +242,9 @@
       <button type="submit" class="btn btn-outline-secondary" id="buttons" ng-click="doShowName();" style="border-radius:30px ;  box-shadow:5px 5px 5px lightgray;" >Search By Name</button>
    
    </div>
+  </center>
    <br>
+
     <!------------------------------------------------------------------------------->
     <div class="container" >
       <br>
@@ -283,7 +289,7 @@
            
            
               <div class="mb-3">
-                <img src="uploads/{{jsonArrayMoreinfo.picpath}}" alt="" width="50%" height="50%" style="border-radius: 50%;">
+                <img src="uploads/{{jsonArrayMoreinfo.picpath}}" alt="" width="30%" height="30%" style="border-radius: 50%;">
                 {{jsonArrayMoreinfo.other}}
               </div>
               <hr>
@@ -341,20 +347,18 @@
 </div>
 
 <center>
-<footer class="foot">
-  <div class="container d-flex justify-content-between flex-wrap">
-    <div class=" col-lg-3 col-md-6">
-    <h3 class="footerSectionHeading">Products</h3>
-  
-                <a href=" #">Brands </a>
-               
-                  <br>
-                 <a href="#">Measurements</a>
-               
-                 <br>
-                 <a href="#">Creators</a>
+<footer >
+  <div  style="background-color: white; padding: 10px 10px 10px 10px;">
 
+   <div class="row" style="margin-top:30px;">
 
+       <div class=" col-lg-3 col-md-6">
+        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+         <h3 class="footerSectionHeading">Products</h3>
+         <a href=" #">Brands </a>
+         <br>
+        <a href="#">Creators</a>
+</div>
   </div>
 
     <div class="col-lg-3 col-md-6">
@@ -364,19 +368,14 @@
     <br>
    <a href=" https://www.facebook.com/profile.php?id=61562955028858">Facebook</a>
    <i class="fa-brands fa-instagram"></i>
-    
-  
- 
 </div>
 
     <div class="col-lg-3 col-md-6">
     <h3 class="footerSectionHeading">About us</h3>
     <ul class="list-unstyled f_list">
       <li><a href="#">Company</a></li>
-      
   </ul>
-    
-    </div>
+     </div>
 
     <div class="col-lg-3 col-md-6">
     <h3 class="footerSectionHeading">Help</h3>
@@ -386,23 +385,14 @@
     </ul>
   </div>
 
-  <center>
-    <div class="footer_bg">
-        <div class="footer_bg_one"></div>
-        <div class="footer_bg_two"></div>
-    </div>
+<div>
+  <p >copyright Ⓒ  2024-soon Connexus.com
+  <br> All rights reserved.</p>
 </div>
+                    
+               
 
-<div class="foot_bottom">
-    <div class="container">
-       
-            <div class="col-lg-6 col-sm-7">
-            <center>
-                    <p >copyright Ⓒ  2024-soon Connexus.com
-                  <br> All rights reserved.</p>
-                </center>
-
-  </div>
+</div>
 </div>
 </footer>
 
